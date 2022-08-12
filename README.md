@@ -17,7 +17,7 @@
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <kbd><br>
-    <img width="200" style="border-radius: 5px" src="src/imagem/gif-smart.gif" alt="Smart Xavantes Shop">
+    <img width="200" style="border-radius: 5px" src="src/imagem/gif-smart2.gif" alt="Smart Xavantes Shop">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
 </p><br><br><hr>
