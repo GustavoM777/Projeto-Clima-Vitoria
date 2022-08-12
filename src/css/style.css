@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;500&family=DM+Mono:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.tela {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.smart-video {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.clima-container {
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    border: 8px solid white;
+}
+
+#temperatura h2 {
+    font-size: 40px;
+}
+
+#vento-velocidade {
+    font-size: 30px;
+}
+
+#bandeira {
+    padding: 15px 0;
+}
+
+.container .glass {
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(27, 27, 27);
+    background-color: rgba(91, 89, 89, 0.1);
+}
+
+.glass:hover {
+    opacity: 0.7;
+}
+
+.container #glass {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    height: 388px;
+    padding: 10px;
+    color: #fff;
+    box-shadow: 0 0 10px rgb(27, 27, 27);
+    background-color: rgba(91, 89, 89, 0.1);
+}
+
+#glass:hover {
+    opacity: 0.7;
+}
+
+.data-hora {
+    width: 300px;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    border: 8px solid white;
+}
+
+#relogioDigital {
+    font-family: 'Nova Mono', monospace;
+    user-select: none;
+    border: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#relogioDigital span {
+    font-size: 50px;
+}
+
+.data-hora h1 {
+    font-size: 50px;
+}
+
+#dataSmart {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+audio {
+    max-width: 250px;
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.conteudo {
+    text-align: center;
+}
+
+.vitoria .conteudo h1 {
+    font-size: 130px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.conteudo h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.conteudo a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 5px 40px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.conteudo a:hover {
+    opacity: 0.7;
+}
+
+.back-video {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+footer .copy {
+    text-align: left;
+    margin-left: 100px;
+}
+
+@media(max-width: 900px) {
+    * {
+        position: static;
+        text-align: center;
+    }
+
+    .back-video {
+        display: none;
+    }
+
+    .window {
+        position: absolute;
+        justify-items: center;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .container #glass {
+        width: 320px;
+        height: 384px;
+    }
+
+    .glass {
+        margin: 35px;
+    }
+
+    #glass {
+        margin-top: 135px;
+    }
+
+    .conteudo h1 {
+        font-size: 160px;
+        position: relative;
+    }
+
+    .smart-video {
+        display: block;
+        position: absolute;
+        width: 560px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    footer .copy {
+        position: absolute;
+        bottom: 0;
+    }
+}
