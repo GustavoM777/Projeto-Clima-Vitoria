@@ -5,7 +5,7 @@
   <br><br>
 </h1>
 
-<p align="center">Projeto Clima Vitória - Apresenta a data, horário, temperatura e clima na Cidade de Vitória-ES.</p>
+<p align="center">Projeto Clima Vitória - É um projeto Autoral - Apresenta a data, horário, temperatura e clima na Cidade de Vitória-ES.</p>
 
 <p align="center"><i>"Seja bem-vindo"</i></p>
 
