@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Bom dia Vitória</title>
+</head>
+
+<body onload="moveRelogio()">
+    <main class="tela">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="src/video/vitoria-window.mp4" type="video/mp4">
+        </video>
+
+        <video autoplay loop muted plays-inline class="smart-video">
+            <source src="src/video/vitoria-smart.mp4" type="video/mp4">
+        </video>
+
+        <div class="window">
+            <div class="container">
+                <div id="glass">
+                    <div class="barra-lateral">
+                        <div class="clima-container">
+                            <div id="temperatura">
+                                <h2>🌡<span id="temp"></span>° C</h2>
+                            </div>
+                            <div>
+                                <h2 id="clima">Clima</h2>
+                                <img id="iconeAnimado" src="" alt="" height="100" width="100">
+                            </div>
+                            <div>
+                                <h2>Veloc. do Vento</h2>
+                                <h1 id="vento-velocidade"></h1>
+                            </div>
+                        </div>
+                        <div id="bandeira">
+                            <img src="src/imagem/bandeira_es.gif" alt="Gif Bandeira do Espírito Santo" width="70px">
+                        </div>
+                    </div>
+                </div>
+                <div class="glass">
+                    <div class="barra-direita">
+                        <div class="data-hora">
+                            <div id="dataSmart">
+                                <span id="semana"></span>
+                                <span id="data"></span>
+                            </div>
+                            <div id="relogioDigital">
+                                <span id="h"></span>:<span id="m"></span>:<span id="s"></span>
+                            </div>
+                            <div>
+                                <h1 id="title">Título</h1>
+                            </div>
+                        </div>
+                        <audio autoplay loop controls>
+                            <source src="src/audio/audio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vitoria">
+            <div class="conteudo">
+                <h1 id="vitoria">Vitória</h1>
+                <a href="#">Navegar</a>
+            </div>
+        </div>
+        <footer>
+            <div class="copy">
+                © 2022 Morning in Vix & Develop Gustavo Mattos
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
