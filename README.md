@@ -1,4 +1,5 @@
 # Projeto-Clima-Vitoria
+
 <h1 align="center">
   <br>
   <img src="src/imagem/sun.png" alt="Logo"  width="225">
@@ -9,7 +10,15 @@
 
 <p align="center"><i>"Seja bem-vindo"</i></p>
 
-<hr><br>
+<hr>
+
+## ➤ Sobre o projeto
+
+O objetivo inicial deste projeto seria mostrar em tempo real os dados climáticos na Cidade de Vitória-ES. Para tal, utilizamos de **consumo de API** e como tecnologia principal o **JavaScript**. No entanto, no decorrer do projeto percebemos a necessidade de inserir elementos viabilizando assim uma melhor experiência do usuário.
+
+Para conferir o funcionamento, **[click aqui](https://www.clima-vitoria.ga)**
+
+Para uma experiência completa, após acessar o link do projeto, não esqueça de dar o play.
 
 <p align="center">
   <kbd>
@@ -24,10 +33,12 @@
 
 
 ## Tecnologias utilizadas
-- HTML
-- CSS
-- Javascript
+- **HTML**
+- **CSS**
+- **Javascript**
 <br><br>
 <hr>
 
 Made with 💙 by Gustavo Mattos 👋 [See my LinkedIn](linkedin.com/in/guh-mattos/)
+
+
