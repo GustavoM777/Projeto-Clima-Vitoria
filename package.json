@@ -22,7 +22,7 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "emitWarning: false"
+      "emitError: false"
     ]
   },
   "browserslist": {
