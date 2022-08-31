@@ -39,35 +39,35 @@ const Main = () => {
                 //       console.log(data.weather[0].main)
                 switch (data.weather[0].main) {
                     case 'Thunderstorm':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/thunder.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/thunder.svg'
                         climaTempo.textContent = 'TROVOADA';
                         break;
                     case 'Drizzle':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/rainy-2.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-2.svg'
                         climaTempo.textContent = 'CHUVISCO';
                         break;
                     case 'Rain':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/rainy-7.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-7.svg'
                         climaTempo.textContent = 'CHUVA';
                         break;
                     case 'Snow':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/snowy-6.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/snowy-6.svg'
                         climaTempo.textContent = 'NEVE';
                         break;
                     case 'Clear':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/day.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/day.svg'
                         climaTempo.textContent = 'LIMPO';
                         break;
                     case 'Atmosphere':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/weather.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/weather.svg'
                         climaTempo.textContent = 'ATMOSFERA';
                         break;
                     case 'Clouds':
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/cloudy-day-1.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
                         climaTempo.textContent = 'NUBLADO';
                         break;
                     default:
-                        iconeAnimado.src = 'https://clima-vitoria.ga/animado/cloudy-day-1.svg'
+                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
                         climaTempo.textContent = 'NUBLADO';
                         console.log('por defecto');
                 }
