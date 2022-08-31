@@ -1,7 +1,7 @@
 import React from 'react'
 // import Horario from './Horario'
 import styles from './CardHorario.css'
-import audioBg from '../assets/audioBg.mp3'
+import audioBg from '../assets/audioBg.m4a'
 
 function CardHorario() {
 
