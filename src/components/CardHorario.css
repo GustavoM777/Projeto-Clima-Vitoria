@@ -1,0 +1,26 @@
+.CardHorario {
+    width: 300px;
+    height: 388px;
+    color: #fff;
+    background-color: rgba(91, 89, 89, 0.1);
+    box-shadow: 0 0 10px rgb(27 27 27);
+    padding: 10px;
+    font-size: 1.7em;
+}
+
+.Content {
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    border: 8px solid white;
+    text-shadow: 2px 2px 5px #2d2d2d;
+}
+
+.Content p, Content span, Content h1 {
+    margin: 12px 0;
+}
+
+.SubContent {
+    display: flex;
+    justify-content: center;
+   align-self: center;
+}
