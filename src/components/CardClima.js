@@ -5,7 +5,7 @@ import styles from './CardClima.css'
 function CardClima() {
 
     return (
-        <div className="ClimaTempo">
+        <div className="CardTempo">
             <div className="BorderClima">
                 <ClimaTempo />
             </div>

@@ -5,7 +5,8 @@
     background-color: rgba(91, 89, 89, 0.1);
     box-shadow: 0 0 10px rgb(27 27 27);
     padding: 10px;
-    font-size: 1.7em;
+    margin: 15px;
+    font-size: 1.4em;
 }
 
 .Content {
@@ -17,6 +18,10 @@
 
 .Content p, Content span, Content h1 {
     margin: 12px 0;
+}
+
+.Content #semana, .Content #data {
+    font-size: 1.4em;
 }
 
 .SubContent {
