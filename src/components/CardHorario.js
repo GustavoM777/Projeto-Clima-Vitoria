@@ -1,6 +1,7 @@
 import React from 'react'
 // import Horario from './Horario'
 import styles from './CardHorario.css'
+import audioBg from '../assets/audioBg.mp3'
 
 function CardHorario() {
 
@@ -14,12 +15,10 @@ function CardHorario() {
                 <h1 id="title">Bom dia!</h1>
             </div>
             <div className="SubContent">
-                <img src="https://clima-vitoria.ga/src/imagem/bandeira_es.gif" alt="Gif Bandeira do Espírito Santo" width="70px" />
+            <audio src={audioBg} controls autoPlay loop />
             </div>
         </div>
-
     )
-
 }
 
 export default CardHorario

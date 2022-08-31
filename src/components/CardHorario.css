@@ -16,16 +16,23 @@
     text-shadow: 2px 2px 5px #2d2d2d;
 }
 
-.Content p, Content span, Content h1 {
+.Content p,
+Content span,
+Content h1 {
     margin: 12px 0;
 }
 
-.Content #semana, .Content #data {
+.Content #semana,
+.Content #data {
     font-size: 1.4em;
 }
 
 .SubContent {
     display: flex;
     justify-content: center;
-   align-self: center;
+    align-self: center;
+}
+
+.SubContent audio {
+    margin: 60px 0;
 }

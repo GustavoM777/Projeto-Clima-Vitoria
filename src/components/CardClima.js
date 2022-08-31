@@ -10,7 +10,7 @@ function CardClima() {
                 <ClimaTempo />
             </div>
             <div className="SubContent">
-                <img src="https://clima-vitoria.ga/src/imagem/bandeira_es.gif" alt="Gif Bandeira do Espírito Santo" width="70px" />
+                <img src="assets/bandeira_es.gif" alt="Gif Bandeira do Espírito Santo" width="70px" />
             </div>
         </div>
     )
