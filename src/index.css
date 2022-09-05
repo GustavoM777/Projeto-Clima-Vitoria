@@ -4,6 +4,7 @@
   font-weight: bold;
 }
 
+/* minha classe mais externa */
 .main {
   width: 100%;
   height: 100vh;
@@ -28,10 +29,17 @@ video {
   text-align: center;
 }
 
-@media(max-width: 718px) { 
+/* @media(max-width: 718px) { 
   .main {
     width: 100%;
     height: 180vh;
+  }
+} */
+
+@media(max-width: 718px) { 
+  .container {
+    transform: scale(0.70);
+    top: -90px;
   }
 }
 

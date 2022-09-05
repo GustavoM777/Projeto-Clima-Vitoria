@@ -1,4 +1,4 @@
-.CardHorario {
+.card {
     width: 300px;
     height: 388px;
     color: #fff;
@@ -6,7 +6,20 @@
     box-shadow: 0 0 10px rgb(27 27 27);
     padding: 10px;
     margin: 15px;
-    font-size: 1.4em;
+    font-size: 1.2em;
+}
+
+.cards {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
 .Content {
@@ -16,10 +29,16 @@
     text-shadow: 2px 2px 5px #2d2d2d;
 }
 
-.Content p,
-Content span,
-Content h1 {
-    margin: 12px 0;
+.Content img {
+    width: 75px;
+    height: 75px;
+}
+
+p,
+span,
+h1,
+h2 {
+    margin: 10px 0;
 }
 
 .Content #semana,
@@ -33,6 +52,14 @@ Content h1 {
     align-self: center;
 }
 
+.SubContent img {
+    margin: 15px 0;
+}
+
 .SubContent audio {
     margin: 60px 0;
+}
+
+#CardHora {
+    font-size: 1.2em;
 }

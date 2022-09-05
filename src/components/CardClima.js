@@ -1,94 +1,76 @@
-import React from 'react'
-import ClimaTempo from './ClimaTempo'
-import styles from './CardClima.css'
+import React, { useState, useEffect } from 'react'
 
-function CardClima() {
+const CardClima = (props) => {
 
-    function getUserPosition() {
-        let url = ''
-        navigator.geolocation.getCurrentPosition((pos) => {
-            url = `https://api.openweathermap.org/data/2.5/weather?lat=${-20.319}&lon=${-40.338}&units=imperial&APPID=f17f92108bc4e261b52225ab078e7125`
-            fetchApi(url)
-        })
-    }
+    const [data, setData] = useState({})
 
-    function fetchApi(url) {
+    useEffect(() => {
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${-20.319}&lon=${-40.338}&units=imperial&APPID=f17f92108bc4e261b52225ab078e7125`
 
-        let temp = document.querySelector('#temp')
+        let temperatura = document.querySelector('#temp')
         let vento = document.querySelector('#vento-velocidade')
-        let climaTempo = document.querySelector('#clima')
-        let iconeAnimado = document.querySelector('#iconeAnimado')
-        let cidade = window.document.getElementById('city')
+        let climaTempo = document.querySelector('#climaTempo')
+        let icone = document.querySelector('#icone')
+        let cidade = document.querySelector('#city')
 
-        fetch(url)
-            .then((data) => {
-                return data.json()
+        async function fetchApi() {
+            const response = await fetch(url)
+            const data = await response.json()
 
-            })
-            .then((data) => {
-                let tempInCelsius = ((5 / 9) * (data.main.temp - 32)).toFixed(1);
-                let desc = data.weather[0].description
+            let tempInCelsius = await ((5 / 9) * (data.main.temp - 32)).toFixed(1)
+            temperatura.innerHTML = tempInCelsius
+            vento.innerHTML = `${data.wind.speed} m/s`
+            cidade.innerHTML = data.name
 
-                climaTempo.textContent = desc.toUpperCase()
-                vento.textContent = `${data.wind.speed} m/s`
-                temp.innerHTML = tempInCelsius
-                cidade.textContent = data.name
-                //       console.log(data)
-                //       console.log(data.weather[0].main)
-                switch (data.weather[0].main) {
-                    case 'Thunderstorm':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/thunder.svg'
-                        climaTempo.textContent = 'TROVOADA';
-                        break;
-                    case 'Drizzle':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-2.svg'
-                        climaTempo.textContent = 'CHUVISCO';
-                        break;
-                    case 'Rain':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-7.svg'
-                        climaTempo.textContent = 'CHUVA';
-                        break;
-                    case 'Snow':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/snowy-6.svg'
-                        climaTempo.textContent = 'NEVE';
-                        break;
-                    case 'Clear':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/day.svg'
-                        climaTempo.textContent = 'LIMPO';
-                        break;
-                    case 'Atmosphere':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/weather.svg'
-                        climaTempo.textContent = 'ATMOSFERA';
-                        break;
-                    case 'Clouds':
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
-                        climaTempo.textContent = 'NUBLADO';
-                        break;
-                    default:
-                        iconeAnimado.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
-                        climaTempo.textContent = 'NUBLADO';
-                        console.log('por defecto');
-                }
+            switch (data.weather[0].main) {
+                case 'Thunderstorm':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/thunder.svg'
+                    climaTempo.textContent = 'TROVOADA';
+                    break;
+                case 'Drizzle':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-2.svg'
+                    climaTempo.textContent = 'CHUVISCO';
+                    break;
+                case 'Rain':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/rainy-7.svg'
+                    climaTempo.textContent = 'CHUVA';
+                    break;
+                case 'Snow':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/snowy-6.svg'
+                    climaTempo.textContent = 'NEVE';
+                    break;
+                case 'Clear':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/day.svg'
+                    climaTempo.textContent = 'LIMPO';
+                    break;
+                case 'Atmosphere':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/weather.svg'
+                    climaTempo.textContent = 'ATMOSFERA';
+                    break;
+                case 'Clouds':
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
+                    climaTempo.textContent = 'NUBLADO';
+                    break;
+                default:
+                    icone.src = 'https://taupe-stardust-6b492f.netlify.app/animado/cloudy-day-1.svg'
+                    console.log('por defecto'); climaTempo.textContent = 'NUBLADO';
+            }
+        }
 
-            })
-            .catch((err) => {
-                cidade.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
-                temp.innerHTML = `-`;
-            })
-    }
-
-    getUserPosition();
+        fetchApi()
+    }, []);
 
     return (
-        <div className="CardTempo">
-            <div className="BorderClima">
-                <ClimaTempo />
+        <>
+            <h2>🌡<span id="temp">{data.name}</span>° C</h2>
+            <h2 id="climaTempo">{props.climaTempo}</h2>
+            <div className='img-container'>
+                <img id="icone" src={props.img} alt='imgClima' />
             </div>
-            <div className="SubContent">
-                <img src="https://taupe-stardust-6b492f.netlify.app/src/imagem/bandeira_es.gif" alt="Gif Bandeira do Espírito Santo" width="71px" />
-            </div>
-        </div>
+            <h2>{props.veloc}</h2>
+            <h2 id="vento-velocidade">{props.vento}</h2>
+        </>
     )
 }
 
-export default CardClima 
+export default CardClima
