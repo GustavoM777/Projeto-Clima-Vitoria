@@ -36,6 +36,13 @@ video {
   }
 } */
 
+@media(max-width: 375px) { 
+  .container {
+    transform: scale(0.50);
+    top: -90px;
+  }
+}
+
 @media(max-width: 718px) { 
   .container {
     transform: scale(0.70);
