@@ -37,8 +37,8 @@ video {
 } */
 
 @media(max-width: 376px) { 
-  .container {
-    transform: scale(0.50);
+  .card {
+    transform: scale(0.80);
     top: -90px;
   }
 }
